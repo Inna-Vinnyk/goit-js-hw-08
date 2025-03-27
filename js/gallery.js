@@ -76,20 +76,7 @@ galleryContainer.addEventListener('click', event => {
   }
 
   const originalImageUrl = event.target.dataset.source;
-  console.log(originalImageUrl);
-});
-
-// * Модальне вікно
-galleryContainer.addEventListener('click', event => {
-  event.preventDefault();
-
-  const isGalleryImage = event.target.classList.contains('gallery-image');
-  if (!isGalleryImage) {
-    return;
-  }
-
-  const originalImageUrl = event.target.dataset.source;
-
+  //* Модальне вікно
   const instance = basicLightbox.create(`
         <img src="${originalImageUrl}" width="1112" height="640">
     `);
